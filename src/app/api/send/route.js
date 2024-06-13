@@ -1,14 +1,10 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
+
 const resend = new Resend("3c5f43be-efc4-46c9-be30-1600604deb05");
 const fromEmail = process.env.FROM_EMAIL;
 
-<<<<<<< HEAD
-=======
-const resend = new Resend("3c5f43be-efc4-46c9-be30-1600604deb05");
-
->>>>>>> 6d991e47f3e2e1535072368dc183a0668921d5d8
 export async function POST(req, res) {
   const { email, subject, message } = await req.json();
   console.log(email, subject, message);
